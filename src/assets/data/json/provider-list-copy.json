@@ -1,0 +1,23 @@
+[
+    {
+        "_id": "eb69aa40-a029-4388-b9bc-8985df1af3eb",
+        "type": "DATA_PROVIDER",
+        "organization": 101,
+        "providerConfig": 201,
+        "meta": "testing-data1"
+    },
+    {
+        "_id": "8985df1af3eb-a029-4388-b9bc-eb69aa40",
+        "type": "DATA_PROVIDER",
+        "organization": 102,
+        "providerConfig": 202,
+        "meta": "testing-data2"
+    },
+    {
+        "_id": "4388-a029-8985df1af3eb-b9bc-eb69aa40",
+        "type": "DATA_PROVIDER",
+        "organization": 103,
+        "providerConfig": 203,
+        "meta": "testing-data3"
+    }
+]

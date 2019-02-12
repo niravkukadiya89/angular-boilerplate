@@ -1,0 +1,63 @@
+<section class="contentpart">
+  <div class="container">
+    <div class="login_wrap">
+      <div class="page-content loginpage">
+        <div class="header">
+          <a href="#" class="mainlogo"><img src="assets/img/Logo.png" /></a>
+        </div>
+        <div class="pg-heading">
+          <mat-label translate>Create an account</mat-label>
+        </div>
+
+        <form [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm)" novalidate>
+          <mat-form-field>
+            <input type="text" matInput formControlName="firstName" placeholder="{{'Your first name' | translate}}"
+              [ngClass]="{ 'is-invalid': submitted && registerForm.controls.firstName.errors }" required>
+            <mat-error *ngIf="registerForm.controls.firstName.errors && (registerForm.controls.firstName.dirty || registerForm.controls.firstName.touched)">
+              <span *ngIf="registerForm.controls.firstName.errors.required" translate>First Name is required </span>
+              <span *ngIf="registerForm.controls.firstName.errors.pattern" translate>Only alphabets are allowed</span>
+            </mat-error>
+          </mat-form-field><br>
+
+          <mat-form-field>
+            <input type="text" matInput formControlName="lastName" placeholder="{{'Your surname' | translate}}"
+              required>
+            <mat-error *ngIf="registerForm.controls.lastName.errors && (registerForm.controls.lastName.dirty || registerForm.controls.lastName.touched)">
+              <span *ngIf="registerForm.controls.lastName.errors.required" translate>Last name is required </span>
+              <span *ngIf="registerForm.controls.lastName.errors.pattern" translate>Only alphabets are allowed</span>
+            </mat-error>
+          </mat-form-field><br>
+          <mat-form-field>
+            <input type="email" matInput formControlName="email" placeholder="{{'Your email address' | translate}}"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [ngClass]="{ 'is-invalid': submitted && registerForm.controls.email.errors}"
+              required>
+            <mat-error *ngIf="registerForm.controls.email.errors && (registerForm.controls.email.dirty || registerForm.controls.email.touched)">
+              <span *ngIf="registerForm.controls.email.errors.required" translate>Email is required </span>
+              <span *ngIf="registerForm.controls.email.errors.pattern" translate>Please enter a valid email id</span>
+            </mat-error>
+          </mat-form-field><br>
+          <mat-form-field>
+            <input type="password" matInput formControlName="password" placeholder="{{'Choose your password' | translate}}"
+              required>
+            <mat-error *ngIf="registerForm.controls.password.errors && (registerForm.controls.password.dirty || registerForm.controls.password.touched)">
+              <span *ngIf="registerForm.controls.password.errors.required" translate>Password is required </span>
+              <span *ngIf="registerForm.controls.password.errors.pattern" translate>Password must contain atleast one
+                Capital letter, Digit, Symbol of 8 characters!</span>
+            </mat-error>
+          </mat-form-field><br>
+          <mat-form-field>
+            <input type="password" matInput formControlName="repeatpassword" placeholder="{{'Repeat your password' | translate}}"
+              required>
+            <mat-error *ngIf="registerForm.get('repeatpassword').errors && registerForm.get('repeatpassword').errors.ConfirmPassword">
+              Passsword and ConfirmPassword didn't match.
+            </mat-error>
+          </mat-form-field>
+          <div class="btnrow">
+            <a routerLink="/" class="link" translate>Login</a>
+            <button mat-raised-button color="primary" [disabled]="registerForm.invalid" translate>Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

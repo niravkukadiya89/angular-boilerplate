@@ -1,0 +1,48 @@
+
+<div class="new_project_popup">
+  <div class="inside_wrap regPage myproj">
+    <div class="project-details">
+      <div class="stepwrap">
+        <div class="row">
+          <div class="col-12 ">
+            <h5 translate>Basic information</h5>
+          </div>
+        </div><br>
+        <div class="row">
+          <div class="col-12 ">
+            <div class="row">
+                <div class="col-12 col-md-6" style="background-color: #fafafa;">
+                  <mat-label>FirstName</mat-label>
+                    <input type="text" matInput  translate [(ngModel)]="firstName" placeholder="{{'Your first name' | translate }}"> 
+                  </div><br>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6" style="background-color: #fafafa;">
+                    <mat-label class="lastname">LastName</mat-label>
+                    <input type="text" matInput class="userLastname" translate [(ngModel)]="lastName" placeholder="{{'Your last name' | translate }}">
+                  </div>
+            </div><br><br>
+            <div class="row">
+                <div class="col-12 col-md-6" style="background-color: #fafafa;">
+                    <mat-label>Email</mat-label>
+                    <input type="text" matInput  translate [(ngModel)]="email" placeholder="Email">
+                  </div>
+            </div><br><br>
+            <div class="row">
+                <div class="col-12 col-md-6" style="background-color: #fafafa;">
+                    <mat-label>Organization</mat-label>
+                    <input type="text" matInput  translate [(ngModel)]="organizationName" placeholder="Organization">
+                  </div>
+            </div>
+            <div class="row">
+                <img *ngIf="imageBlobUrl != null" class="svg" class="updatenotificationimg avatar-adjust" [src]="imageBlobUrl" />
+              </div>
+            <button type="button" mat-raised-button (click)="ExitUserInfoDialog()" 
+            class="cancel_link float-right mr-3 userDialog" style="background-color: #de6d2c; color: #fff;"
+              translate>{{'Cancel' | translate}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

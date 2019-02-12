@@ -1,0 +1,36 @@
+[
+    {
+        "type": "DATA_PROVIDER",
+        "_id": "5b98fc0267a18b002a632cd7",
+        "name": "SlimLabs BIM Viewer",
+        "organization": {
+            "type": "ORGANIZATION",
+            "users": [],
+            "_id": "5b98fbf767a18b002a632cd5",
+            "name": "BIM Provider organization",
+            "email": "provider@bimprovider.org",
+            "address": "5b98fbf767a18b002a632cd6",
+            "createdAt": "2018-09-12T11:43:51.335Z",
+            "updatedAt": "2018-09-12T11:43:51.335Z"
+        },
+        "createdAt": "2018-09-12T11:44:02.241Z",
+        "updatedAt": "2018-09-12T11:44:02.241Z"
+    },
+    {
+        "type": "DATA_PROVIDER",
+        "_id": "5b98fc2f67a18b002a632cda",
+        "name": "Product information org",
+        "organization": {
+            "type": "ORGANIZATION",
+            "users": [],
+            "_id": "5b98fc1867a18b002a632cd8",
+            "name": "PRODUCT_INFORMATION Provider organization",
+            "email": "provider@PIprovider.org",
+            "address": "5b98fc1867a18b002a632cd9",
+            "createdAt": "2018-09-12T11:44:24.110Z",
+            "updatedAt": "2018-09-12T11:44:24.110Z"
+        },
+        "createdAt": "2018-09-12T11:44:47.991Z",
+        "updatedAt": "2018-09-12T11:44:47.991Z"
+    }
+]

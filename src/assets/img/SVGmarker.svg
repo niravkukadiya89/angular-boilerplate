@@ -1,0 +1,17 @@
+<svg width="25" height="43" viewBox="0 0 25 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse opacity="0.3" cx="12.5" cy="40.5" rx="4.5" ry="2.5" fill="url(#paint0_radial)"/>
+<path d="M25 12.5C25 16.3019 22.745 20.1836 20.6244 23C12.4394 33.8703 15.6016 41 12.5 41C9.39836 41 12.5606 33.8703 4.37561 23C2.25497 20.1836 0 16.3019 0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5Z" fill="#DE6D2C"/>
+<path d="M24.5 12.5C24.5 16.1293 22.334 19.8983 20.225 22.6992C16.0755 28.2101 14.796 32.7859 14.1654 35.9795C14.0561 36.533 13.9657 37.0488 13.8841 37.514C13.8492 37.7129 13.8159 37.9026 13.7835 38.082C13.6733 38.6914 13.5734 39.1795 13.4506 39.5641C13.3267 39.9522 13.1959 40.1797 13.0586 40.3108C12.9397 40.4244 12.7805 40.5 12.5 40.5C12.2195 40.5 12.0603 40.4244 11.9414 40.3108C11.8041 40.1797 11.6733 39.9522 11.5494 39.5641C11.4266 39.1795 11.3267 38.6914 11.2165 38.082C11.1841 37.9026 11.1508 37.7129 11.1159 37.514C11.0343 37.0488 10.9439 36.533 10.8346 35.9795C10.204 32.7859 8.92447 28.2101 4.77504 22.6992C2.666 19.8983 0.5 16.1293 0.5 12.5C0.5 5.87258 5.87258 0.5 12.5 0.5C19.1274 0.5 24.5 5.87258 24.5 12.5Z" stroke="black" stroke-opacity="0.1"/>
+<circle cx="12.5" cy="12.5" r="4.5" fill="black" fill-opacity="0.3"/>
+<circle cx="12.5" cy="12.5" r="10" stroke="url(#paint1_linear)"/>
+<defs>
+<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 40.5) rotate(90) scale(2.5 4.5)">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="paint1_linear" x1="12.5" y1="2" x2="12.5" y2="7.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.3"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
