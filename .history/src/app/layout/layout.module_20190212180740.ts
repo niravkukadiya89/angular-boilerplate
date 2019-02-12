@@ -17,6 +17,7 @@ import { ShareModule } from '../shared/share.module';
     CommonModule,
     LayoutRoutingModule,
     ShareModule,
+
     NgMultiSelectDropDownModule.forRoot(),
     NgxMatSelectSearchModule
   ],

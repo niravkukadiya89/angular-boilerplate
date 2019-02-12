@@ -22,9 +22,9 @@ const routes: Routes = [
         data: { title: 'medewerkers' }
       },
       {
-        path: 'activity-log',
+        path: 'activitylog',
         loadChildren: '../activity-log/activity-log.module#ActivityLogModule',
-        data: { title: 'activity-log' }
+        data: { title: 'medewerkers' }
       },
     ]
   }

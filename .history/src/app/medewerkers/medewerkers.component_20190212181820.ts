@@ -1,6 +1,6 @@
-import { Component, OnInit, ChangeDetectorRef, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ElementRef } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { MatDialog, MatSnackBar, MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
+import { MatDialog, MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
 import { LoaderService } from '../core/loader/loader.service/loader.service';
 
@@ -25,17 +25,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./medewerkers.component.scss']
 })
 export class MedewerkersComponent implements OnInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild('projectListPaginator') projectListingPaginator: MatPaginator;
-  ProjectListDataSource = new MatTableDataSource();
-  myProjectsDisplayedColumns: string[] = ['select', 'name', 'Location', 'meta.projectData.serviceContract', 'meta.projectData.contracttype',
-  'createdAt', 'meta.projectData.projectStatus', 'notifications', 'actions'];
-  
   displayedColumns: string[] = ['Dossiernummer', 'Babynaam', 'Medewerker', 'Download PDF'];
   dataSource = ELEMENT_DATA;
 
   constructor(private _translateService: TranslateService,
+    
     public matDialog: MatDialog,
     private cdRef: ChangeDetectorRef,
     private elRef: ElementRef,

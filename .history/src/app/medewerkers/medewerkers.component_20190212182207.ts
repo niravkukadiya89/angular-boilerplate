@@ -31,7 +31,6 @@ export class MedewerkersComponent implements OnInit {
   ProjectListDataSource = new MatTableDataSource();
   myProjectsDisplayedColumns: string[] = ['select', 'name', 'Location', 'meta.projectData.serviceContract', 'meta.projectData.contracttype',
   'createdAt', 'meta.projectData.projectStatus', 'notifications', 'actions'];
-  
   displayedColumns: string[] = ['Dossiernummer', 'Babynaam', 'Medewerker', 'Download PDF'];
   dataSource = ELEMENT_DATA;
 

@@ -18,13 +18,8 @@ const routes: Routes = [
       },
       {
         path: 'medewerkers',
-        loadChildren: '../medewerkers/medewerkers.module#MedewerkersModule',
+        loadChildren: './medewerkers/medewerkers.module#MedewerkersModule',
         data: { title: 'medewerkers' }
-      },
-      {
-        path: 'activity-log',
-        loadChildren: '../activity-log/activity-log.module#ActivityLogModule',
-        data: { title: 'activity-log' }
       },
     ]
   }
