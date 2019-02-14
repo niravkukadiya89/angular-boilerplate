@@ -6,6 +6,7 @@ const appRoutes: Routes = [
   { path: 'forgot-password', loadChildren: 'src/app/forgot-password/forgot-password.module#ForgotPasswordModule' },
   { path: 'register', loadChildren: 'src/app/register/register.module#RegisterModule' },
   { path: 'reset-password', loadChildren: 'src/app/reset-password/reset-password.module#ResetPasswordModule' },
+  { path: 'material-form', loadChildren: 'src/app/material-form/material-form.module#MaterialFormModule' },
   { path: '', loadChildren: 'src/app/layout/layout.module#LayoutModule' },
   { path: '**', loadChildren: 'src/app/notfound/notfound.module#NotfoundModule' }
 ];

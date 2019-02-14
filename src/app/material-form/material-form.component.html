@@ -1,0 +1,41 @@
+<section class="contentpart">
+  <div class="container">
+    <div class="login_wrap">
+      <div class="page-content loginpage">
+        <div class="pg-heading">
+          <mat-label translate>Material Form</mat-label>
+        </div>
+
+        <form [formGroup]="materialForm" (ngSubmit)="loginUser(loginForm)">
+          <!-- <mat-form-field>
+            <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+          </mat-form-field>
+
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
+          </mat-autocomplete> -->
+          <!-- <mat-form-field>
+            <input type="email" matInput formControlName="email" placeholder="{{'Your email address' | translate}}"
+              required>
+            <mat-error *ngIf="email.errors && (email.dirty || email.touched)">
+              <span *ngIf="email.errors.required" translate>Email is required </span>
+              <span *ngIf="email.errors.pattern" translate>Email is invalid </span>
+            </mat-error>
+          </mat-form-field><br>
+          <mat-form-field>
+            <input type="password" matInput formControlName="password" placeholder="{{'Your password' | translate}}"
+              required>
+            <mat-error *ngIf="password.errors && (password.dirty || password.touched)">
+              <span *ngIf="password.errors.required" translate>Password is required</span>
+            </mat-error>
+          </mat-form-field>
+          <div class="btnrow">
+            <a routerLink="/register" class="link" translate>Create</a>
+            <button mat-raised-button color="primary" translate>Login</button>
+          </div> -->
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
