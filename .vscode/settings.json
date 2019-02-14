@@ -1,4 +1,4 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/b3efb6b5-6537-4430-94b0-4e0b394d3e0c/resourceGroups/appsvc_rg_linux_centralus/providers/Microsoft.Web/sites/baby-thuiszorg",
+    "appService.defaultWebAppToDeploy": "/subscriptions/b3efb6b5-6537-4430-94b0-4e0b394d3e0c/resourceGroups/appsvc_rg_linux_centralus/providers/Microsoft.Web/sites/Angular-boilerplat",
     "appService.deploySubpath": ""
 }
