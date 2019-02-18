@@ -17,11 +17,6 @@ const routes: Routes = [
         data: { title: 'Dashboard' }
       },
       {
-        path: 'medewerkers',
-        loadChildren: '../medewerkers/medewerkers.module#MedewerkersModule',
-        data: { title: 'medewerkers' }
-      },
-      {
         path: 'activity-log',
         loadChildren: '../activity-log/activity-log.module#ActivityLogModule',
         data: { title: 'activity-log' }
