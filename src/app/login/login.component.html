@@ -9,25 +9,29 @@
           <mat-label translate>Inloggen</mat-label>
         </div>
 
-        <form  class="needs-validation" novalidate [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm)">
+        <form  novalidate [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm)">
           
           <div class="form-group">
             <label for="email">E-mailadres</label>
-            <input type="email" class="form-control form-control-lg" formControlName="email" placeholder="E-mailadres"
+            <input type="email" class="form-control" formControlName="email" placeholder="E-mailadres" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
               required>
-            <div class="invalid-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
-              <span *ngIf="email.errors.required" translate>Email is required </span>
-              <span *ngIf="email.errors.pattern" translate>Email is invalid </span>
-            </div>
+            
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+              </div>  
           </div>
           
           <div class="form-group">
             <label for="password">Wachtwoord</label>
-            <input type="password" class="form-control form-control-lg" formControlName="password" placeholder="Wachtwoord"
+            <input type="password" class="form-control form-control-lg" formControlName="password" placeholder="Wachtwoord" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
               required>
-            <div class="invalid-feedback" *ngIf="password.errors && (password.dirty || password.touched)">
-              <span *ngIf="password.errors.required" translate>Password is required</span>
+
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
             </div>
+
           </div>
 
           <div class="watch_forgot">
@@ -35,11 +39,10 @@
           </div>
           <div class="btnrow">
             <a routerLink="/register" class="link" translate>Create</a>
-            <button mat-raised-button color="primary" translate>Login</button>
+            <button type="submit" class="btn btn-primary"  translate>Login</button>
           </div>
         </form>
       </div>
     </div>
-
   </div>
 </section>

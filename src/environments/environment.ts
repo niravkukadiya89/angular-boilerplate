@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   envName: 'development',
-  endPoint: 'https://beta.BoilerPlat.nl/',
+  endPoint: 'https://beta.cirlinq.slimlabs.nl/',
   website: 'BoilerPlat.nl'
 };
 
