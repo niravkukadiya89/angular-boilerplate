@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
 
     this.loaderService.attach(this.authService.signinUser(form.value)).subscribe(response => {
       sessionStorage.setItem('token', response['data'].token);
-      sessionStorage.setItem('active-user', response['data'].user._id);
+      sessionStorage.setItem('active-user', response['data'].id);
       this.loaderService.attach(this.router.navigate(['./dashboard']));
     },
       error => {

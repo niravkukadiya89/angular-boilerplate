@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   envName: 'development',
-  endPoint: 'https://beta.cirlinq.slimlabs.nl/',
+  endPoint: 'http://54.93.113.252/api/',
   website: 'BoilerPlat.nl'
 };
 

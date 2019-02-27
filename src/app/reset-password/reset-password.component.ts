@@ -21,12 +21,8 @@ export class ResetPasswordComponent implements OnInit {
   token: string;
   constructor(private formBuilder: FormBuilder , private resetpasswordservice: ResetpasswordService,
     private activeRoute: ActivatedRoute , private _toastrService: ToastrService , private router: Router,
-    private translate: TranslateService, public snackBar: MatSnackBar) { 
-    if (localStorage.getItem('DefaultLang') === 'DU') {
+    private translate: TranslateService, public snackBar: MatSnackBar) {
       this.translate.setDefaultLang('nl');
-    } else {
-      this.translate.setDefaultLang('en');
-    }
     }
 
   ngOnInit() {
