@@ -7,6 +7,7 @@ import { MatSnackBar } from '@angular/material';
 
 import { AuthenticationService } from './shared/services/authentication.service';
 import { LoaderService } from '../core/loader/loader.service/loader.service';
+import { allResolved } from 'q';
 
 @Component({
   selector: 'app-login',
@@ -23,13 +24,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private translate: TranslateService, private router: Router, private loaderService: LoaderService,
     private authService: AuthenticationService, private snackBar: MatSnackBar) {
-      this.translate.setDefaultLang('nl'); 
-    // if (localStorage.getItem('DefaultLang') === 'DU') {
-    //   this.translate.setDefaultLang('nl');
-    // } else {
-    //   this.translate.setDefaultLang('en');
-    // }
-  }
+      this.translate.setDefaultLang('nl');  
+    }
 
   // convenience getter for easy access to form fields
   get f() { return this.loginForm.controls; }
@@ -55,11 +51,13 @@ export class LoginComponent implements OnInit {
   loginUser(form: any) {
     this.submitted = true;
     // stop here if form is invalid
-    // if (this.loginForm.invalid) {
-    //   return;
-    // }
-    this.router.navigate(['./dashboard']);
-    
+    if (this.loginForm.invalid) {
+      alert('ddd');
+      return;
+      
+    }
+
+    //this.router.navigate(['./dashboard']);
 
     // this.loaderService.attach(this.authService.signinUser(form.value)).subscribe(response => {
     //   sessionStorage.setItem('token', response['data'].token);
