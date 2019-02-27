@@ -31,6 +31,11 @@ const routes: Routes = [
         loadChildren: '../view-tabdata/view-tabdata.module#ViewTabdataModule',
         data: { title: 'view-tabdata' }
       },
+      {
+        path: 'add-client',
+        loadChildren: '../add-dossier/add-dossier.module#AddDossierModule',
+        data: { title: 'add-client' }
+      },
     ]
   }
 ];

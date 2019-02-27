@@ -1,0 +1,265 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white justify-content-between">
+  <div class="container">
+
+    <div class="nav-left-text">
+      <span class="dossier-lable">Unsaved dossier</span>
+    </div>
+    <div class="nav-right-button">
+      <button type="button" routerLink="/dashboard" class="btn btn-light btn-cancel">Cancel</button>
+      <button type="button" class="btn btn-primary">Opsaaln</button>
+    </div>
+  </div>
+
+</nav>
+<div class="container newDoisser">
+  <div class="row">
+    <span class="dossier-add-title">Nieuw dossier aanmaken</span>
+  </div>
+  <form>
+    <div class="dossier-form">
+      <label class="dossier-title">Persoonlijke gegevens</label>
+      <div class="formContainer">
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="isk" translate>Klantnummer ISK</label>
+            <input type="text" class="form-control" id="isk" placeholder="1234567890">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="bsn" translate>BSN nummer Klant </label>
+            <input type="text" class="form-control" id="bsn" placeholder="1234567890">
+          </div>
+        </div>
+
+
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <label for="letterofname" translate>Voorletters </label>
+            <input type="text" class="form-control" id="letterofname">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="lastnameclient" translate>Achternaam Klant</label>
+            <input type="text" class="form-control" id="lastnameclient">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="firstnameclient" translate>Voornaam Klant</label>
+            <input type="text" class="form-control" id="firstnameclient">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="middelnameclient" translate>Tussenvoegsel Klant</label>
+            <input type="text" class="form-control" id="middelnameclient">
+          </div>
+        </div>
+
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="lastnamepartner" translate>Achternaam Partner</label>
+            <input type="text" class="form-control" id="lastnamepartner">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="firstnamepartner" translate>Tussenvoegsel Partner </label>
+            <input type="text" class="form-control" id="firstnamepartner">
+          </div>
+        </div>
+
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="typeaddr" translate>Type adres</label>
+            <input type="text" class="form-control" id="typeaddr">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="adresklant " translate>Adres klant </label>
+            <input type="text" class="form-control" id="adresklant">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="postcodeclient" translate>Postcode klant</label>
+            <input type="text" class="form-control" id="typeaddr">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="teleclient" translate>Telefoonnummer klant </label>
+            <input type="text" class="form-control" id="teleclient">
+          </div>
+        </div>
+
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="Municipalityclient" translate> Gemeente van klant</label>
+            <input type="text" class="form-control" id="Municipalityclient">
+          </div>
+        </div>
+
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="telemuniclient" translate>Telefoonnummer contactpersoon gemeente</label>
+            <input type="text" class="form-control" id="telemuniclient">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="contactpersonmuniclient" translate>Contactpersoon gemeente </label>
+            <input type="text" class="form-control" id="contactpersonmuniclient">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- start -  Insurance data -->
+    <div class="dossier-form adressForm">
+      <label class="dossier-title insurancedata" translate>Verzekeringsgegevens</label>
+      <div class="formContainer">
+
+        <div class="form-group">
+          <label for="insuracecompanynumber">UZOVI </label>
+          <input type="text" class="form-control" id="insuracecompanynumber" placeholder="e.g. 1234">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="insurancecompany">Verzekeraar </label>
+            <input type="text" class="form-control" id="insurancecompany">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="clientinsurancenumber">Verzekeringsnummer </label>
+            <input type="text" class="form-control" id="clientinsurancenumber">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- end -  Insurance data -->
+
+    <!-- start -  Data of Child -->
+    <div class="dossier-form adressForm">
+      <label class="dossier-title dataofchild" translate>Gegevens kinderen </label>
+      <div class="formContainer">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="childname">Naam kind </label>
+            <input type="text" class="form-control" id="childname">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="ageofchild">Leeftijd </label>
+            <input type="text" class="form-control" id="ageofchild">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="seakofchild">Geslacht </label>
+            <input type="text" class="form-control" id="seakofchild">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="childotherinfo">Bijzonderheden kind </label>
+            <textarea class="form-control" id="childotherinfo"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end -  Data of Child -->
+
+
+
+    <!-- start -  Care Giver -->
+    <div class="dossier-form adressForm">
+      <label class="dossier-title caregiven" translate>Mantelzorg </label>
+      <div class="formContainer">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="nameofcaregiver">Naam Mantelzorg </label>
+            <input type="text" class="form-control" id="nameofcaregiver">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="telecaregiver">Telefoonnummer mantelzorg </label>
+            <input type="text" class="form-control" id="telecaregiver">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end -  Care Giver -->
+
+
+    <!-- start -  Active Helper -->
+    <div class="dossier-form adressForm">
+      <label class="dossier-title caregiven" translate>Actieve hulpverleners </label>
+      <div class="formContainer">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="helpertype">Hulpverlener type </label>
+            <input type="text" class="form-control" id="helpertype">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="helpername">Naam hulpverlener </label>
+            <input type="text" class="form-control" id="helpername">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="telehelper">Telefoonnummer hulpverlener </label>
+            <input type="text" class="form-control" id="telehelper">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="isk">Verklaring van inzage geupload in ISK? </label>
+            <select id="inputState" class="form-control">
+              <option selected>Ja</option>
+              <option>Nee</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- end -  Active Helper -->
+
+
+    <!-- start -  indication and appointment -->
+    <div class="dossier-form adressForm">
+      <label class="dossier-title caregiven" translate>INDICATIE & Afspraken </label>
+      <div class="formContainer">
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="problem">Problematiek </label>
+            <textarea type="text" class="form-control" id="problem"></textarea>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="askedcare">Gevraagde zorg </label>
+            <input type="text" class="form-control" id="askedcare">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="extendindicationcare">Omvang geïndiceerde zorg </label>
+            <input type="text" class="form-control" id="extendindicationcare">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end -  indication and appointment -->
+
+    <!-- start -  Financieel  -->
+    <div class="dossier-form adressForm">
+      <label class="dossier-title caregiven" translate>Financieel </label>
+      <div class="formContainer">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="isk">Financiele goedkeuring afgegeven  </label>
+            <select id="inputState" class="form-control">
+              <option selected>Ja</option>
+              <option>Nee</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="isk">Document geupload in ISK  </label>
+            <select id="inputState" class="form-control">
+              <option selected>Ja</option>
+              <option>Nee</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end -  Financieel  -->
+  </form>
+
+</div>

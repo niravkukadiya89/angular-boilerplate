@@ -1,0 +1,76 @@
+.btn {
+    // background: #343534 none repeat scroll 0 0;
+    border: 0 none;
+    box-shadow: none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    height: 42px;
+    line-height: 18px;
+    padding: 10px 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+  }
+
+  .nav-right-button .btn-cancel{
+    background-color: #E9E9E9;
+    color: #000;
+  }
+
+    span.dossier-add-title {
+    position: absolute;
+    width: 330px;
+    height: 36px;
+    left: 396px;
+    top: 100px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 130px;
+    font-size: 28px;
+    color: #000000;
+}
+
+span.dossier-lable {
+    margin-left: 150px;
+}
+
+.nav-right-button {
+    margin-right: 196px;
+}
+
+.dossier-form {
+    border: 1px solid #fff;
+    width: auto;
+    margin-left: 150px;
+    margin-top: 100px;
+    display: block;
+    height: auto;
+    background: #fff;
+    margin-right: 195px;
+}
+
+label.dossier-title {
+    padding-top: 32px;
+    padding-left: 32px;
+    height: 20px;
+    left: 42px;
+    top: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 16px;
+    color: #000000;
+}
+
+.formContainer {
+    padding: 32px;
+}
+
+.dossier-form.adressForm {
+    margin-top: 45px;
+}
+.container.newDoisser {
+    margin-bottom: 50px;
+}
