@@ -26,6 +26,11 @@ const routes: Routes = [
         loadChildren: '../activity-log/activity-log.module#ActivityLogModule',
         data: { title: 'activity-log' }
       },
+      {
+        path: 'view-tabdata',
+        loadChildren: '../view-tabdata/view-tabdata.module#ViewTabdataModule',
+        data: { title: 'view-tabdata' }
+      },
     ]
   }
 ];
