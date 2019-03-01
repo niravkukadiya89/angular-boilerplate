@@ -20,15 +20,11 @@ export class LoginComponent implements OnInit {
   password: FormControl;
   submitted = false;
   loginStatus: string;
+  firstName: string;
 
   constructor(private translate: TranslateService, private router: Router, private loaderService: LoaderService,
     private authService: AuthenticationService, private snackBar: MatSnackBar) {
-      this.translate.setDefaultLang('nl'); 
-    // if (localStorage.getItem('DefaultLang') === 'DU') {
-    //   this.translate.setDefaultLang('nl');
-    // } else {
-    //   this.translate.setDefaultLang('en');
-    // }
+      this.translate.setDefaultLang('nl');
   }
 
   // convenience getter for easy access to form fields
@@ -55,27 +51,23 @@ export class LoginComponent implements OnInit {
   loginUser(form: any) {
     this.submitted = true;
     // stop here if form is invalid
-    // if (this.loginForm.invalid) {
-    //   return;
-    // }
-    this.router.navigate(['./dashboard']);
-    
+    if (this.loginForm.invalid) {
+      return;
+    }
 
-    // this.loaderService.attach(this.authService.signinUser(form.value)).subscribe(response => {
-    //   sessionStorage.setItem('token', response['data'].token);
-    //   sessionStorage.setItem('active-user', response['data'].user._id);
-    //   // sessionStorage.setItem('orgId', response['data'].user.organization._id);
-
-    //   this.loaderService.attach(this.router.navigate(['./dashboard']));
-    // },
-    //   error => {
-    //     if (error['error'].error) {
-    //       this.snackBar.open(error['error'].error, 'Success', {
-    //         duration: 2500,
-    //         verticalPosition: 'top'
-    //       });
-    //     }
-    //   });
+    this.loaderService.attach(this.authService.signinUser(form.value)).subscribe(response => {
+      sessionStorage.setItem('token', response['data'].token);
+      sessionStorage.setItem('active-user', response['data'].id);
+      this.router.navigate(['./dashboard']);
+    },
+      error => {
+        if (error['error'].error) {
+          this.snackBar.open(error['error'].error, 'Success', {
+            duration: 2500,
+            verticalPosition: 'top'
+          });
+        }
+      });
   }
 
   clearSessionStorage() {

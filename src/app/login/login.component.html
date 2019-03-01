@@ -1,30 +1,47 @@
 <section class="contentpart">
   <div class="container">
-      <div class="login-logo">
-          <a href="#" class="mainlogo"><img src="assets/img/Logo.png" /></a>
-        </div>
+    <div class="login-logo">
+      <a href="#" class="mainlogo"
+        ><img alt="logo" src="assets/img/Logo.png"
+      /></a>
+    </div>
     <div class="login_wrap">
-        
-  
       <div class="page-content loginpage">
         <div class="pg-heading">
           <mat-label translate>Inloggen</mat-label>
         </div>
-
         <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm)">
           <mat-form-field>
-            <input type="email" matInput formControlName="email" placeholder="{{'Your email address' | translate}}"
-              required>
+            <input
+              type="email"
+              matInput
+              formControlName="email"
+              placeholder="{{ 'Your email address' | translate }}"
+              required
+            />
             <mat-error *ngIf="email.errors && (email.dirty || email.touched)">
-              <span *ngIf="email.errors.required" translate>Email is required </span>
-              <span *ngIf="email.errors.pattern" translate>Email is invalid </span>
-            </mat-error>
-          </mat-form-field><br>
+              <span *ngIf='email.errors.required' translate
+                >Email is required
+              </span>
+              <span *ngIf="email.errors.pattern" translate
+                >Email is invalid
+              </span>
+            </mat-error> </mat-form-field
+          ><br />
           <mat-form-field>
-            <input type="password" matInput formControlName="password" placeholder="{{'Your password' | translate}}"
-              required>
-            <mat-error *ngIf="password.errors && (password.dirty || password.touched)">
-              <span *ngIf="password.errors.required" translate>Password is required</span>
+            <input
+              type="password"
+              matInput
+              formControlName="password"
+              placeholder="{{ 'Your password' | translate }}"
+              required
+            />
+            <mat-error
+              *ngIf="password.errors && (password.dirty || password.touched)"
+            >
+              <span *ngIf="password.errors.required" translate
+                >Password is required</span
+              >
             </mat-error>
           </mat-form-field>
           <div class="watch_forgot">
@@ -37,6 +54,5 @@
         </form>
       </div>
     </div>
-
   </div>
 </section>
