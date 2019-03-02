@@ -12,14 +12,24 @@ import { NgxSelectModule, INgxSelectOptions } from 'ngx-select-ex';
 
 import { MaterialModule } from './material-module';
 
-const CustomSelectOptions: INgxSelectOptions = { // Check the interface for more options
+import { SharedModule, ButtonModule, PaginatorModule } from 'primeng/primeng';
+import { TableModule } from 'primeng/table';
+import { DataTableModule } from 'primeng/components/datatable/datatable';
+
+const CustomSelectOptions: INgxSelectOptions = {
+  // Check the interface for more options
   optionValueField: 'id',
   optionTextField: 'name',
   keepSelectedItems: true
 };
-  
+
 @NgModule({
   imports: [
+    SharedModule,
+    ButtonModule,
+    PaginatorModule,
+    TableModule,
+    DataTableModule,
     FormsModule,
     ReactiveFormsModule,
     AngularSvgIconModule,
@@ -45,7 +55,12 @@ const CustomSelectOptions: INgxSelectOptions = { // Check the interface for more
     MatExpansionModule,
     QRCodeModule,
     CommonModule,
-    NgxSelectModule
+    NgxSelectModule,
+    SharedModule,
+    ButtonModule,
+    PaginatorModule,
+    TableModule,
+    DataTableModule
   ]
 })
 export class ShareModule {}

@@ -10,9 +10,11 @@ import { ShareModule } from './../shared/share.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardProjectsComponent } from './dashboard-projects/dashboard-projects.component';
+import { OpenComponent } from './open/open.component';
+import { ClosedComponent } from './closed/closed.component';
 
 @NgModule({
-    declarations: [DashboardComponent, DashboardProjectsComponent],
+    declarations: [DashboardComponent, DashboardProjectsComponent, OpenComponent, ClosedComponent],
     entryComponents: [],
     imports: [ShareModule,
         NgbModule, DashboardRoutingModule,
