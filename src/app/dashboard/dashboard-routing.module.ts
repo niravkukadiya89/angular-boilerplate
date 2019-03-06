@@ -6,14 +6,16 @@ import { AuthGaurdService as AuthGuard } from './../core/auth/auth-gaurd.service
 import { DashboardProjectsResolverService } from './dashboard-projects/dashboard-projects-resolver.service';
 
 const dashboardRoutes: Routes = [
-    { path: '', component: DashboardComponent, 
-    // canActivate: [AuthGuard], 
-    // resolve: { projects: DashboardProjectsResolverService } 
-    }
+  {
+    path: '',
+    component: DashboardComponent
+    // canActivate: [AuthGuard],
+    // resolve: { projects: DashboardProjectsResolverService }
+  }
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(dashboardRoutes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forChild(dashboardRoutes)],
+  exports: [RouterModule]
 })
-export class DashboardRoutingModule { }
+export class DashboardRoutingModule {}

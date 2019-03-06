@@ -6,8 +6,7 @@
     <nav mat-tab-nav-bar>
       <a
         mat-tab-link
-        routerLink="/dashboard"
-        routerLinkActive="active"
+        [class.active]="router.isActive('view-tabdata') || router.isActive('dashboard')"
         translate
         >Dashboard</a
       >
@@ -37,8 +36,10 @@
         <mat-option>
           <ngx-mat-select-search> </ngx-mat-select-search>
         </mat-option>
-        <mat-option (click)="SearchUserDialog(userSearchDialog)"><img src="assets/img/searchUser.svg" />
-          {{ "Search by User" | translate }}</mat-option>
+        <mat-option (click)="SearchUserDialog(userSearchDialog)"
+          ><img src="assets/img/searchUser.svg" />
+          {{ "Search by User" | translate }}</mat-option
+        >
       </mat-select>
     </mat-form-field>
   </div>

@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-    readonly TOKEN_HEADER: string = 'Authorization';
+    readonly TOKEN_HEADER: string = 'user-token';
     token: string;
 
     constructor(private router: Router,
