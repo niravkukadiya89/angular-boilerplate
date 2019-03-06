@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
   envName: 'production',
-  endPoint: 'https://beta.BoilerPlat.nl/',
+  endPoint: 'https://develop.cirlinq.api.ledgerleopard.com/',
   website: 'BoilerPlat.nl'
 };

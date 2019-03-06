@@ -17,17 +17,12 @@ const routes: Routes = [
         data: { title: 'Dashboard' }
       },
       {
-        path: 'medewerkers',
-        loadChildren: '../medewerkers/medewerkers.module#MedewerkersModule',
-        data: { title: 'medewerkers' }
-      },
-      {
         path: 'activity-log',
         loadChildren: '../activity-log/activity-log.module#ActivityLogModule',
         data: { title: 'activity-log' }
       },
       {
-        path: 'view-tabdata',
+        path: 'view-tabdata/:id',
         loadChildren: '../view-tabdata/view-tabdata.module#ViewTabdataModule',
         data: { title: 'view-tabdata' }
       },
