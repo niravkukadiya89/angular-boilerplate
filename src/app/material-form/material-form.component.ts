@@ -25,7 +25,7 @@ export interface PokemonGroup {
 })
 export class MaterialFormComponent implements OnInit {
   hide = true;
-  myControl = new FormControl();
+  myControl = new FormControl('', Validators.required);
   pokemonControl = new FormControl();
   toppings = new FormControl();
   email = new FormControl('', [Validators.required, Validators.email]);

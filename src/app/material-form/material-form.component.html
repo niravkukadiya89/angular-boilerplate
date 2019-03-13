@@ -7,14 +7,17 @@
         </div>
 
         <form (ngSubmit)="loginUser(loginForm)">
-          <mat-label>Autocomplete</mat-label>
-          <input type="text" placeholder="Assignee" aria-label="Assignee" matInput [formControl]="myControl"
-            [matAutocomplete]="auto">
-          <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
-            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-              {{option.name}}
-            </mat-option>
-          </mat-autocomplete>
+          <div class="col-md-12"> 
+            <mat-label>Autocomplete</mat-label>
+            <input type="text" placeholder="Assignee" aria-label="Assignee" matInput [formControl]="myControl"
+              [matAutocomplete]="auto" required>
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option.name}}
+              </mat-option>
+            </mat-autocomplete>
+            <span *ngIf="myControl.errors.required" translate>Autocomplete is required </span>
+          </div>
           <div class="col-md-12">
             <mat-label>Checkbox</mat-label>
             <mat-checkbox>Choice1</mat-checkbox>
@@ -104,6 +107,10 @@
           <div class="col-md-12">
             <mat-label>Slider</mat-label>
             <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" min="1" max="100000"></mat-slider>
+          </div>
+          <div class="col-md-12">
+            <mat-label>Basic slide-toggles</mat-label>
+            <mat-slide-toggle>Slide me!</mat-slide-toggle>
           </div>
           <!-- <mat-form-field>
             <input type="email" matInput formControlName="email" placeholder="{{'Your email address' | translate}}"
