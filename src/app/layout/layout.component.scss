@@ -1,44 +1,18 @@
-
-.mat-select {
-    min-width: 112px;
-    max-width: 280px;
-    -webkit-overflow-scrolling: touch;
-    padding-top: 0;
-    padding-bottom: 0;
-    max-height: 256px;
-    min-width: 100%;
-    border-radius: 4px;
-    margin-top: 22px;
-}
-
-mat-select .mat-select-trigger .mat-select-value
-.mat-select-arrow-wrapper .mat-select-arrow {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid;
-    margin: -34px 4px;
-}
-
-
-.srch_div .mat-select{
-    position: absolute;
-    right: 10px;
-    top: 13px;
+.container-fluid {
+    margin-top: 4rem;
     padding: 0;
-    margin: 0;
 }
 
-.mat-select .mat-select-arrow {
-    color: #fff!important;
+@media only screen and (max-width: 991px) {
+    .container-fluid {
+        margin-top: 5.5rem;
+        padding: 0;
+    }
 }
-
-.mat-dialog-content {
-    display: block;
-    margin: 0 -24px;
-    padding: 0 24px;
-    max-height: 65vh;
-    overflow: hidden;
-    -webkit-overflow-scrolling: touch;
+@media only screen and (max-width: 600px) {
+    .container-fluid {
+        margin-top: 5.5rem;
+        padding: 0;
+    }
 }
+    

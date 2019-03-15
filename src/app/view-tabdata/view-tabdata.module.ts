@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ViewTabdataRoutingModule } from './view-tabdata-routing.module';
 import { ViewTabdataComponent } from './view-tabdata.component';
 import { ShareModule } from '../shared/share.module';
+import { ViewTabdataService } from './view-tabdata.service';
 
 @NgModule({
   declarations: [ViewTabdataComponent],
@@ -12,6 +13,7 @@ import { ShareModule } from '../shared/share.module';
     ViewTabdataRoutingModule,
     ShareModule
   ],
-  exports: [ViewTabdataComponent]
+  exports: [ViewTabdataComponent],
+  providers: [ViewTabdataService]
 })
 export class ViewTabdataModule { }

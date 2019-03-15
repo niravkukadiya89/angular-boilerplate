@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ViewTabdataService } from './services/view-tabdata.service';
 import { LoaderService } from '../core/loader/loader.service/loader.service';
 import { MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
+import { ViewTabdataService } from './view-tabdata.service';
 
 @Component({
   selector: 'app-view-tabdata',
@@ -18,7 +18,7 @@ export class ViewTabdataComponent implements OnInit {
     private loaderService: LoaderService,
     private snackBar: MatSnackBar,
     private route: Router
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.getOrg();
@@ -29,10 +29,8 @@ export class ViewTabdataComponent implements OnInit {
       if (response) {
         this.OrgDataSource = response['data'].reverse();
         this.orgdata = this.OrgDataSource.map(orgname => {
-          return {id : orgname._id, name: orgname.name};
+          return { id: orgname._id, name: orgname.name };
         });
-        console.log(this.orgdata);
-       // return orgdata;
       }
     },
       error => {
@@ -45,9 +43,6 @@ export class ViewTabdataComponent implements OnInit {
       });
   }
   assignorg() {
-    console.log(this.orgvalue);
-    console.log(this.route);
-    console.log(this.route.url.split('/')[2]);
   }
 
 }

@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { AuthGaurdService as AuthGuard } from './core/auth/auth-gaurd.service';
+import { ShareModule } from './shared/share.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AuthGaurdService as AuthGuard } from './core/auth/auth-gaurd.service';
   ],
   imports: [
     CoreModule,
+    ShareModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
@@ -26,9 +28,9 @@ import { AuthGaurdService as AuthGuard } from './core/auth/auth-gaurd.service';
     ToastrModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
       }
     })
   ],

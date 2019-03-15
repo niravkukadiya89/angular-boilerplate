@@ -21,40 +21,41 @@ export class UserDialogComponent implements OnInit {
   organization: string;
   imageBlobUrl: string | ArrayBuffer;
   id;
-  
+
   constructor(private userProfileService: UserProfileService,
-    @Inject(MAT_DIALOG_DATA) public data: any,
+    //   @Inject(MAT_DIALOG_DATA) public data: any,
     private loaderService: LoaderService,
-    private snackbar: MatSnackBar, 
-    public dialogRef: MatDialogRef<UserDialogComponent> ) { 
-      this.id = data.id;
-    }
+    private snackbar: MatSnackBar
+    //   public dialogRef: MatDialogRef<UserDialogComponent>
+  ) {
+    // this.id = data.id;
+  }
 
   ngOnInit() {
     this.getUserDetails();
-    this.getUserById(); 
+    this.getUserById();
   }
 
   getUserDetails() {
     this.loaderService.attach(this.userProfileService.getUsers())
       .subscribe(response => {
-      this.usersData = response['data'];
+        this.usersData = response['data'];
       },
-       error => {
-        this.snackbar.open(error['error'].error, 'Error', {
-          duration: 2500,
-          verticalPosition: 'top'
+        error => {
+          this.snackbar.open(error['error'].error, 'Error', {
+            duration: 2500,
+            verticalPosition: 'top'
+          });
         });
-      });
   }
 
   ExitUserInfoDialog(): void {
-    this.dialogRef.close();
+    //  this.dialogRef.close();
   }
 
   streamImg(id: any) {
     this.imageBlobUrl = null;
-    this.userProfileService. streamImage(id).subscribe(response => {
+    this.userProfileService.streamImage(id).subscribe(response => {
       const blobfile = response;
       const reader = new FileReader();
       reader.addEventListener('load', () => {
@@ -67,7 +68,7 @@ export class UserDialogComponent implements OnInit {
   }
 
   getUserById() {
-  this.userProfileService.getUserDetailsById(this.id)
+    this.userProfileService.getUserDetailsById(this.id)
       .subscribe(response => {
         this.usersData = response['data'];
         this.firstName = response['data']['firstName'];
@@ -77,14 +78,14 @@ export class UserDialogComponent implements OnInit {
           this.streamImg(response['data']._id);
         }
         if (this.usersData.organization.name) {
-        this.organizationName = response['data']['organization']['name'];
+          this.organizationName = response['data']['organization']['name'];
         }
       },
-       error => {
-        this.snackbar.open(error['error'].error, 'Error', {
-          duration: 2500,
-          verticalPosition: 'top'
+        error => {
+          this.snackbar.open(error['error'].error, 'Error', {
+            duration: 2500,
+            verticalPosition: 'top'
+          });
         });
-      });
   }
 }

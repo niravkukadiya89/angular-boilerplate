@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
- 
 import { LayoutComponent } from './layout.component';
-import { AuthGaurdService as AuthGuard } from '../core/auth/auth-gaurd.service';
 
 const routes: Routes = [
   {
@@ -22,7 +20,7 @@ const routes: Routes = [
         data: { title: 'activity-log' }
       },
       {
-        path: 'view-tabdata/:id',
+        path: 'view-tabdata',
         loadChildren: '../view-tabdata/view-tabdata.module#ViewTabdataModule',
         data: { title: 'view-tabdata' }
       },

@@ -1,21 +1,16 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
-import { DashboardComponent } from './dashboard.component';
-import { AuthGaurdService as AuthGuard } from './../core/auth/auth-gaurd.service';
-import { DashboardProjectsResolverService } from './dashboard-projects/dashboard-projects-resolver.service';
-
-const dashboardRoutes: Routes = [
+const routes: Routes = [
   {
     path: '',
     component: DashboardComponent
-    // canActivate: [AuthGuard],
-    // resolve: { projects: DashboardProjectsResolverService }
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(dashboardRoutes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DashboardRoutingModule {}
+export class DashboardRoutingModule { }

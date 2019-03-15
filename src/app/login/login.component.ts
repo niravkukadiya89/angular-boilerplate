@@ -5,8 +5,9 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { MatSnackBar } from '@angular/material';
 
-import { AuthenticationService } from './shared/services/authentication.service';
+
 import { LoaderService } from '../core/loader/loader.service/loader.service';
+import { AuthenticationService } from '../core/auth/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -24,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private translate: TranslateService, private router: Router, private loaderService: LoaderService,
     private authService: AuthenticationService, private snackBar: MatSnackBar) {
-      this.translate.setDefaultLang('nl');
+    this.translate.setDefaultLang('nl');
   }
 
   // convenience getter for easy access to form fields
