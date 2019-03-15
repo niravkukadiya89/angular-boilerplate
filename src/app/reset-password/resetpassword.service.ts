@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { ResetPasswordModel } from 'src/app/shared/shared-models/models/users/user.model';
+import { ResetPasswordModel } from 'src/app/model/user.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ResetpasswordService {
 
   constructor(private _httpClient: HttpClient) { }

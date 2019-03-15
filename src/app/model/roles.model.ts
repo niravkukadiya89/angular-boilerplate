@@ -1,4 +1,4 @@
-export interface RolesModel {
+export class RolesModel {
     _id: number;
     type: string;
     role: string;

@@ -1,4 +1,4 @@
-export interface UserModel {
+export class UserModel {
     _id: number;
     type: string;
     userType: string;
@@ -15,6 +15,6 @@ export interface UserModel {
     updatedAt: Date;
 }
 
-export interface ResetPasswordModel {
+export class ResetPasswordModel {
     password: string;
 }

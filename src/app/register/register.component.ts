@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 import { TranslateService } from '@ngx-translate/core';
 import { ToastrService } from 'ngx-toastr';
-import { MatSnackBar } from '@angular/material';
+// import { MatSnackBar } from '@angular/material';
 
 import { ConfirmPasswordValidator } from './confirm-password.validator';
 
@@ -23,12 +23,11 @@ export class RegisterComponent implements OnInit {
   repeatpassword: FormControl;
   submitted = false;
   responseMessage: string;
-  loading = false;
 
   constructor(
     private translate: TranslateService,
     private router: Router,
-    public snackBar: MatSnackBar,
+    // public snackBar: MatSnackBar,
     private _toastrService: ToastrService
   ) {
     this.translate.setDefaultLang('nl');
@@ -40,8 +39,6 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loading = false;
-
     this.firstName = new FormControl('', [
       Validators.required,
       Validators.pattern('[a-zA-Z ]+')
@@ -88,8 +85,9 @@ export class RegisterComponent implements OnInit {
     if (this.registerForm.invalid) {
       return false;
     }
+  }
 
-    console.log(form.value);
-
+  get isButtonDisabled(): boolean {
+    return this.registerForm.invalid;
   }
 }

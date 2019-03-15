@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default fixed-top">
+  <div class="container">
+
+    <div class="col p-0 logo_wrap">
+      <a class="navbar-brand" routerLink="/">
+        <img src="assets/img/Logo.png" height="34" width="34" alt="logo">
+      </a>
+    </div>
+    <div class="col p-0 header_right_col">
+      <div class="mainmenu">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
+            <img src="assets/img/Logo.png" height="34" width="34" alt="menu" />
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" [collapse]=isCollapsed>
+          <ul class="nav navbar-nav">
+            <li>
+              <a routerLink="/dashboard" routerLinkActive="active">
+                Dashboard
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-menu float-right">
+        <span class="user">
+          <img alt="user" src="assets/img/Logo.png" height="34" width="34">
+        </span>
+      </div>
+    </div>
+  </div>
+</nav>
